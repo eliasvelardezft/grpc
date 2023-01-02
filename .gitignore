@@ -1,0 +1,5 @@
+__pycache__
+.vscode
+
+recommendations_pb2_grpc.py
+recommendations_pb2.py
