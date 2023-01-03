@@ -1,0 +1,24 @@
+version: '3.3'
+services:
+  moviehub:
+    build:
+      context: .
+      dockerfile: moviehub/Dockerfile
+    environment:
+      RECOMMENDATIONS_HOST: recommendations
+    image: moviehub
+    networks:
+      - grpc-microservices
+    ports:
+      - 5000:5000
+
+  recommendations:
+    build:
+      context: .
+      dockerfile: recommendations/Dockerfile
+    image: recommendations
+    networks:
+      - grpc-microservices
+
+networks:
+  grpc-microservices:
