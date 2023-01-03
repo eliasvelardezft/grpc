@@ -24,4 +24,5 @@ def render_homepage():
     return render_template(
         "home.html",
         recommendations=recommendations_response.recommendations,
+        category_name=MovieCategory.Name(MovieCategory.SCI_FI),
     )

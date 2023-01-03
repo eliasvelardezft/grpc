@@ -3,7 +3,7 @@
     <title>Movie recommendations!</title>
 </head>
 <body>
-    <h1>Sci-Fi movies you may like</h1>
+    <h1>{{ category_name }} movies you may like</h1>
     <ul>
         {% for movie in recommendations %}
         <li>{{ movie.title }}</li>
